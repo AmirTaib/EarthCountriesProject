@@ -1,0 +1,8 @@
+td{
+    text-align: left;
+}
+
+.notValid{
+border: 3px solid red;
+outline: none;
+}

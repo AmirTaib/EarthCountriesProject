@@ -1,0 +1,44 @@
+<!-- Container (The Band Section) -->
+<div id="band" class="container text-center">
+    <div class="input-group">
+        <input (input)="setSelectedCountries(myInput.value)" appOnlyEnglish type="text" class="form-control" size="50" #myInput placeholder="search country" >
+        <div class="input-group-btn">
+        </div>
+    </div>
+  <div class="col-sm-12" class="row" class="table-responsive">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>NAME</th>
+          <th>NATIVE NAME</th>
+          <th>CAPITAL</th>
+          <th>POPULATION</th>
+          <th>FLAG</th>          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let country of showSelectedCountries">
+          <td>{{country.name}}</td>
+          <td>{{country.nativeName}}</td>
+          <td>{{country.capital}}</td>
+          <td>{{country.population}}</td>
+          <td><img [src]="country.flag" width="75" height="50"/></td>          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+
+
+  <br>
+
+  <!-- routerLink="/meats/img/{{x.linkName}}"
+      <a routerLink="/details" data-toggle="collapse" type="button" (click)="setSelectedPerson(x.id)">
+        <img [src]="x.avatar" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a> -->
+</div>
